@@ -1,11 +1,3 @@
-/*const swiper = new Swiper(".swiper", {
-  spaceBetween: 16,
-
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});*/
 
 let brandsButtons = document.querySelector(".brands-buttons");
 let brandsButtonsWrapper = document.querySelector(".brands-buttons__wrapper");
