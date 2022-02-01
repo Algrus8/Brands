@@ -1,4 +1,3 @@
-
 let brandsButtons = document.querySelector(".brands-buttons");
 let brandsButtonsWrapper = document.querySelector(".brands-buttons__wrapper");
 let buttons = document.querySelectorAll(".brands-buttons__container");
@@ -71,8 +70,8 @@ let windowWidthIsMiddleSize = 767;
 function brandsSliderInit() {
   if (!brandsSlider) {
     brandsSlider = new Swiper(".swiper", {
-      spaceBetween: 0,
       slidesPerView: "auto",
+      spaceBetween: 0,
       freeMode: false,
       pagination: {
         el: ".swiper-pagination",

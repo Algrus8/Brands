@@ -1,174 +1,197 @@
-
-*{
-	padding: 0;
-	margin: 0;
-	border: 0;
-}
-*,*:before,*:after{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul,li{list-style: none;}
-nav,footer,header,aside{display: block;}
-input,button,textarea{font-family:inherit;}
-button{
-	background-color:transparent;
-	border: none;
- }
-
-$brands-title-color:#7E7E82;
-$brands-background-color:#F8F8F8;
-$brands-button-color:#1B1C21;
-$pagination-background-color:#B5B6BC;
-
-$min-middle-devices:768px;
-$max-middle-devices:1119.98px;
-$min-large-devices:1120px;
-
 @font-face {
-	font-family: "TTLakes";
-	src: url(/fonts/TTLakes-Regular.eot);
-	font-style: normal;
-	font-weight: 400 normal;
+  font-family: "TTLakes";
+  src: url(/fonts/TTLakes-Regular.eot);
+  font-style: normal;
+  font-weight: 400 normal;
 }
 
 @font-face {
-	font-family: "TTLakes";
-	src: url(/fonts/TTLakes-Medium.eot);
-	font-style: normal;
-	font-weight: 500;
+  font-family: "TTLakes";
+  src: url(/fonts/TTLakes-Medium.eot);
+  font-style: normal;
+  font-weight: 500;
 }
 
 @font-face {
-	font-family: "TTLakes";
-	src: url(/fonts/TTLakes-Bold.eot);
-	font-style: normal;
-	font-weight: 700 bold;
+  font-family: "TTLakes";
+  src: url(/fonts/TTLakes-Bold.eot);
+  font-style: normal;
+  font-weight: 700 bold;
 }
 
-body{
-	background-color: $brands-background-color;
-	font-family: "TTLakes";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+
+$brands-title-color: #7e7e82;
+$brands-background-color: #f8f8f8;
+$brands-button-color: #1b1c21;
+$pagination-background-color: #b5b6bc;
+
+$min-middle-devices: 768px;
+$max-middle-devices: 1119.98px;
+$min-large-devices: 1120px;
+
+body {
+  background-color: $brands-background-color;
+  font-family: "TTLakes";
 }
 
 .brands-title {
-	min-width: 320px;
-	min-height: 80px;
-	padding: 16px;
-	background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
-	transform: matrix(-1, 0, 0, 1, 0, 0);
-	@media (min-width:$min-middle-devices) and (max-width:$max-middle-devices){
-		padding-right: 24px;
-		min-height: 0;
-	}
+  min-width: 320px;
+  min-height: 80px;
+  padding: 16px;
+  background: linear-gradient(270deg, #f8f8f8 0%, #ffffff 98.61%);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  @media (min-width: $min-middle-devices) and (max-width: $max-middle-devices) {
+    padding-right: 24px;
+    min-height: 0;
+  }
 
-	@media (min-width:$min-large-devices){
-		padding-right: 32px;
-		min-height: 0;
-	}
+  @media (min-width: $min-large-devices) {
+    padding-right: 32px;
+    min-height: 0;
+  }
 
-	&__text {
-		font-size: 1rem;
-		line-height: 24px;
-		letter-spacing: -0.2px;
-		text-transform: uppercase;
-		color:$brands-title-color;
-		transform: matrix(-1, 0, 0, 1, 0, 0);
-	}
+  &__text {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: $brands-title-color;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
 }
 
-.brands-buttons__pagination{
-	top: 183px;
+.brands-buttons__pagination {
+  top: 183px;
 }
 
-.brands-buttons__pagination .swiper-pagination-bullet{
-	background-color: $pagination-background-color;
-	width: 12px;
-	height: 12px;
+.brands-buttons__pagination .swiper-pagination-bullet {
+  background-color: $pagination-background-color;
+  width: 12px;
+  height: 12px;
 }
-.brands-buttons .hidden{
-	display: none;
-}
-
-.brands-buttons__wrapper{
-
-	@media (min-width:$min-middle-devices){
-		display: flex;
-		flex-wrap: wrap;
-		margin: 0;
-	}
+.brands-buttons .hidden {
+  display: none;
 }
 
-.brands-buttons{
-	@media (min-width:$min-middle-devices) {
-		margin-bottom: 8px;
-		margin-top: 24px;
-	}
-}	
+.brands-buttons__wrapper {
+  @media (min-width: $min-middle-devices) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+}
 
-.brands-buttons__container{
-	margin-left: 16px;
-	margin-top: 16px;
-	@media (min-width:$min-middle-devices){
-		margin-left: 24px;
-		margin-bottom: 16px;
-		margin-right: 0px;
-		margin-top: 0px;
-		
-	}
-	@media (min-width:$min-large-devices){
-		margin-left: 32px;
-		margin-right: 0px;
-		margin-top: 0px;
-	}
+.brands-buttons {
+  @media (min-width: $min-middle-devices) {
+    margin-bottom: 8px;
+    margin-top: 24px;
+  }
+}
+
+.brands-buttons__container {
+  margin-left: 16px;
+  margin-top: 16px;
+  @media (min-width: $min-middle-devices) {
+    margin-left: 24px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+  @media (min-width: $min-large-devices) {
+    margin-left: 32px;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
 }
 
 .brands-buttons__container img,
-.brands-buttons__container button{
-	@media (min-width:$min-middle-devices) and (max-width:$min-large-devices){
-		max-width: 224px;
-		max-height: 72px;
-	}
-	
-	@media (min-width:$min-large-devices){
-		max-width: 240px;
-	}
+.brands-buttons__container button {
+  @media (min-width: $min-middle-devices) and (max-width: $min-large-devices) {
+    max-width: 224px;
+    max-height: 72px;
+  }
+
+  @media (min-width: $min-large-devices) {
+    max-width: 240px;
+  }
 }
 
-.brands-show-all{
-	display: none;
-	margin-left: 24px;
-	margin-right: 9px;
-	margin-bottom: 34px;
-	@media (min-width:$min-middle-devices){
-		display: flex;
-	}
+.brands-show-all {
+  display: none;
+  margin-left: 24px;
+  margin-right: 9px;
+  margin-bottom: 34px;
+  @media (min-width: $min-middle-devices) {
+    display: flex;
+  }
 
-	&__button{
-		font-family: "TTLakes";
-		font-size: 16px;
-		font-weight: 500;
-		line-height: 24px;
-		letter-spacing: -0.2px;
-		color: $brands-button-color;
-		}
+  &__button {
+    font-family: "TTLakes";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $brands-button-color;
+  }
 }
 
-.inverted{
-	transform: rotate(180deg);
+.inverted {
+  transform: rotate(180deg);
 }
 
-.brands-buttons__container .swiper-slide{
-	width: auto;
-}
-
-.swiper-slide{
-	min-width: 0;
+.brands-buttons__container.swiper-slide {
+  width: auto;
 }
