@@ -1,13 +1,20 @@
-let brandsButtons = document.querySelector(".brands-buttons");
-let brandsButtonsWrapper = document.querySelector(".brands-buttons__wrapper");
-let buttons = document.querySelectorAll(".brands-buttons__container");
-let brandsShowAll = document.querySelector(".brands-show-all__button");
-let buttonsClasses = buttons.classList;
-let showAllButton = document.querySelector(".brands-show-all__button");
-let showAllIcon = document.querySelector(".brands-show-all__icon");
+const brandsButtons = document.querySelector(".brands-buttons");
+const brandsButtonsWrapper = document.querySelector(".brands-buttons__wrapper");
+const buttons = document.querySelectorAll(".brands-buttons__container");
+const brandsShowAll = document.querySelector(".brands-show-all__button");
+const buttonsClasses = buttons.classList;
+const showAllButton = document.querySelector(".brands-show-all__button");
+const showAllIcon = document.querySelector(".brands-show-all__icon-img");
 
-let windowWidthIsLarge = window.matchMedia("(min-width: 1120px)");
-let windowWidthIsMiddle = window.matchMedia("(min-width: 768px)");
+const swiper = document.querySelector(".swiper");
+const swiperWrapper = document.querySelector(".swiper-wrapper");
+const swiperSlide = document.querySelectorAll(".swiper-slide");
+const paginationBullets = document.querySelectorAll(
+  ".swiper-pagination-bullet"
+);
+
+const windowWidthIsLarge = window.matchMedia("(min-width: 1120px)");
+const windowWidthIsMiddle = window.matchMedia("(min-width: 768px)");
 
 function widthDeviceChange(e) {
   if (e.matches) {
@@ -21,7 +28,6 @@ function widthDeviceChange(e) {
 
 windowWidthIsLarge.addEventListener("resize", widthDeviceChange);
 widthDeviceChange(windowWidthIsLarge);
-console.log(windowWidthIsLarge);
 
 let removeClass = function (collection, classToRemove) {
   for (let i = 0; i < collection.length; i++) {
@@ -65,7 +71,7 @@ brandsShowAll.addEventListener("click", function (evt) {
 });
 
 let brandsSlider = null;
-let windowWidthIsMiddleSize = 767;
+const windowWidthIsMiddleSize = 767;
 
 function brandsSliderInit() {
   if (!brandsSlider) {
@@ -88,12 +94,6 @@ function brandsSliderDestroy() {
   }
 }
 
-let swiper = document.querySelector(".swiper");
-let swiperWrapper = document.querySelector(".swiper-wrapper");
-let swiperSlide = document.querySelectorAll(".swiper-slide");
-
-console.log(swiper);
-
 function widthIsMiddle(e) {
   if (e.matches) {
     brandsSliderDestroy();
@@ -109,8 +109,6 @@ function widthIsMiddle(e) {
 
 windowWidthIsMiddle.addEventListener("resize", widthIsMiddle);
 widthIsMiddle(windowWidthIsMiddle);
-
-let paginationBullets = document.querySelectorAll(".swiper-pagination-bullet");
 
 function addMargin(collection, margin) {
   for (let i = 0; i < collection.length; i++) {
