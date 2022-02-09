@@ -1,14 +1,5 @@
-const brandsButtons = document.querySelector(".brands-buttons");
-const brandsButtonsWrapper = document.querySelector(".brands-buttons__wrapper");
 const buttons = document.querySelectorAll(".brands-buttons__container");
 const brandsShowAll = document.querySelector(".brands-show-all__button");
-const buttonsClasses = buttons.classList;
-const showAllButton = document.querySelector(".brands-show-all__button");
-const showAllIcon = document.querySelector(".brands-show-all__icon-img");
-
-const swiper = document.querySelector(".swiper");
-const swiperWrapper = document.querySelector(".swiper-wrapper");
-const swiperSlide = document.querySelectorAll(".swiper-slide");
 const paginationBullets = document.querySelectorAll(
   ".swiper-pagination-bullet"
 );
@@ -44,6 +35,9 @@ let addClass = function (collection, classToAdd, startIndex = 0) {
 brandsShowAll.addEventListener("click", function (evt) {
   evt.preventDefault();
 
+  const showAllButton = document.querySelector(".brands-show-all__button");
+  const showAllIcon = document.querySelector(".brands-show-all__icon-img");
+
   if (windowWidthIsLarge.matches) {
     console.log("here1");
     if (buttons[buttons.length - 1].classList.contains("hidden")) {
@@ -71,7 +65,7 @@ brandsShowAll.addEventListener("click", function (evt) {
 });
 
 let brandsSlider = null;
-const windowWidthIsMiddleSize = 767;
+const windowWidthIsMiddleSize = 768;
 
 function brandsSliderInit() {
   if (!brandsSlider) {
@@ -95,6 +89,10 @@ function brandsSliderDestroy() {
 }
 
 function widthIsMiddle(e) {
+  const swiper = document.querySelector(".swiper");
+  const swiperWrapper = document.querySelector(".swiper-wrapper");
+  const swiperSlide = document.querySelectorAll(".swiper-slide");
+
   if (e.matches) {
     brandsSliderDestroy();
     swiper.classList.remove("swiper");
