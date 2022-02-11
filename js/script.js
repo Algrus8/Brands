@@ -39,7 +39,7 @@ brandsShowAll.addEventListener("click", function (evt) {
   const showAllIcon = document.querySelector(".brands-show-all__icon-img");
 
   if (windowWidthIsLarge.matches) {
-    console.log("here1");
+  
     if (buttons[buttons.length - 1].classList.contains("hidden")) {
       removeClass(buttons, "hidden");
       showAllButton.textContent = "Скрыть";
@@ -50,7 +50,6 @@ brandsShowAll.addEventListener("click", function (evt) {
       showAllIcon.classList.remove("inverted");
     }
   } else {
-    console.log("here2");
 
     if (buttons[buttons.length - 1].classList.contains("hidden")) {
       removeClass(buttons, "hidden");
